@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-size: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 25%);
+}
+
+/* Navigation */
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 90%);
+}
+
+.name {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+  display: inline-block;
+  color: hsl(0, 0%, 90%);
+}
+
+.nav-bar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-bar li {
+  list-style: none;
+}
+
+.nav-bar li a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  display: block;
+}
+
+.nav-bar li {
+  transition: background-color 450ms ease-in-out;
+}
+
+.nav-bar li:hover {
+  background-color: #555;
+  cursor: pointer;
+}
+
+.nav-bar2 {
+  display: none;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 2.5px;
+  background-color: hsl(0, 0%, 90%);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+#light-dark {
+  margin-right: 1rem;
+  border-radius: 10%;
+  padding: 0.5rem;
+  border: 0.015rem solid beige;
+  background-color: #555;
+  color: hsl(0, 0%, 100%);
+  transition: all 350ms ease-in-out;
+}
+
+#light-dark:hover {
+  cursor: pointer;
+  background-color: lightgray;
+  color:hsl(0, 0%, 25%);
+}
+
+/* Projects Section */
+
+#projects {
+  width: 100%;
+  padding-top: 3.25rem;
+}
+
+#projects h1 {
+  font-size: 2.5rem;
+  padding: 3rem 5.5rem 1.5rem;
+}
+
+.project-container {
+  text-align: center;
+  padding: 5rem 5rem 1rem 5rem;
+  flex-direction: column;
+}
+
+.project-description {
+  text-align: center;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  min-width: 200px;
+}
+
+.project-name p,
+span {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.project-name {
+  margin-top: 1rem;
+}
+
+/* Project Images Containers and Figures */
+
+.project-images-container {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem;
+  margin: auto;
+}
+
+.project1-images {
+  justify-content: space-evenly;
+  width: 70%;
+}
+
+.project2-images {
+  width: 65%;
+  justify-content: space-evenly;
+}
+
+.project3-images {
+  justify-content: space-evenly;
+  width: 70%;
+  padding-bottom: 8rem;
+}
+
+figure {
+  max-width: 250px;
+  margin: 0.75rem 0;
+}
+
+figure img {
+  width: 100%;
+  max-width: 100%;
+}
+
+.figure2 {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  margin: 0.75rem 0;
+}
+
+.figure3 {
+  max-width: 500px;
+}
+
+figure img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+figcaption {
+  max-width: 250px;
+  text-align: center;
+  padding: 1rem;
+}
+
+figcaption p {
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: hsl(0, 0%, 20%);
+  color: hsl(0, 0%, 90%);
+  z-index: 999;
+  padding: 1rem;
+}
+
+/*  Dark Theme  */
+
+.body2 {
+  font-family: "Mulish", sans-serif;
+  font-size: 1rem;
+  background-color: black;
+  color: beige;
+}
+
+/*  Media Queries  */
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+
+}
+
+@media only screen and (min-width: 565px) and (max-width: 900px) {
+  #projects h1 {
+    font-size: 1.75rem;
+    padding: 2rem 3.5rem 0.75rem 1rem;
+  }
+
+  .project-container {
+    padding: 1rem 1rem .5rem 1rem;
+  }
+
+  .project-images-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin: auto;
+  }
+
+  .project1-images {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .project2-images {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .project3-images {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+
+/* Mobile Design */
+
+@media only screen and (min-width: 320px) and (max-width: 600px) {
+  /* header {
+    display: none;
+  } */
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .name {
+    font-size: 1.25rem;
+  }
+
+  .nav-bar {
+    display: none
+  }
+
+  .nav-bar2 {
+    position: absolute;
+    right: 0px;
+    height: 94.3vh;
+    top: 5.7vh;
+    background-color: hsl(0, 0%, 25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  .nav-bar2 li {
+    list-style: none;
+    padding: 2rem;
+    margin-top: 2.5rem;
+    opacity: 0;
+  }
+
+  .nav-bar2 a {
+    color: white;
+  }
+
+  .burger {
+    display: block;
+    margin-left: 12rem;
+  }
+
+  #light-dark {
+    font-size: 0.65rem;
+    /* margin-right: 1rem; */
+    border-radius: 10%;
+    padding: 0.45rem;
+    border: 0.015rem solid beige;
+    background-color: #555;
+    color: hsl(0, 0%, 100%);
+    transition: all 350ms ease-in-out;
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
+
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+
+  }
+
+  .toggle .line2 {
+    opacity: 0;
+  }
+
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .project-name p, span {
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  #projects h1 {
+    font-size: 1.75rem;
+    text-decoration: underline;
+    padding: 2.5rem 3.5rem 0.75rem 1.5rem;
+  }
+
+  .project-container {
+    padding: 1rem 1rem .5rem 1rem;
+  }
+
+  .project-images-container {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    margin: auto;
+  }
+
+  .project1-images {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .project2-images {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .project3-images {
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+} 
+
+
+
